@@ -1,0 +1,4 @@
+suites:
+    main:
+        namespace: SkyBoundTech\SyliusWholesalePlugin
+        psr4_prefix: SkyBoundTech\SyliusWholesalePlugin
