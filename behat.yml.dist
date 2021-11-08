@@ -21,7 +21,7 @@ default:
                     symfony: ~
                 chrome_headless:
                     chrome:
-                        api_url: http://127.0.0.1:9222
+                        api_url: http://10.0.2.15:9222
                         validate_certificate: false
                 chrome:
                     selenium2:
