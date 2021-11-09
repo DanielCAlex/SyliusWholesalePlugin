@@ -1,0 +1,9 @@
+default:
+  suites:
+    ui_managing_rulesets:
+      contexts:
+        - sylius.behat.context.hook.doctrine_orm
+        - sylius.behat.context.setup.security
+
+      filters:
+        tags: "@managing_rulesets && @ui"
