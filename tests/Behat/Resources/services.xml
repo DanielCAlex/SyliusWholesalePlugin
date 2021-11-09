@@ -5,7 +5,7 @@
         <defaults public="true" />
         <!-- Put your Behat services here -->
 
-        <service id="skyboundtech.context.ui.admin.ruleset" class="Tests\SkyBoundtech\SyliusWholesalePlugin\Behat\Context\Ui\Admin\RulesetContext">
+        <service id="skyboundtech.context.ui.admin.ruleset" class="Tests\SkyBoundTech\SyliusWholesalePlugin\Behat\Context\Ui\Admin\ManagingRulesetsContext">
         </service>
 
     </services>

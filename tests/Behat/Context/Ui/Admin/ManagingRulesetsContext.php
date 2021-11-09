@@ -15,7 +15,7 @@ namespace Tests\SkyBoundTech\SyliusWholesalePlugin\Behat\Context\Ui\Admin;
 
 use Behat\Behat\Context\Context;
 
-class RulesetContext implements Context
+class ManagingRulesetsContext implements Context
 {
 
 }
