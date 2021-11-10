@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SkyBoundtech\SyliusWholesalePlugin\DependencyInjection;
+namespace SkyBoundTech\SyliusWholesalePlugin\DependencyInjection;
 
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\FileLocator;

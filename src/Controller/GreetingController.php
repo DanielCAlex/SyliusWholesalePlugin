@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SkyBoundtech\SyliusWholesalePlugin\Controller;
+namespace SkyBoundTech\SyliusWholesalePlugin\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
