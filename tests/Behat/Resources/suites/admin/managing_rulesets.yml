@@ -4,6 +4,7 @@ default:
       contexts:
         - sylius.behat.context.hook.doctrine_orm
         - sylius.behat.context.setup.security
+        - tests.skyboundtech.sylius_wholesale_plugin.behat.context.ui.admin.managing_rulesets_context
 
       filters:
         tags: "@managing_rulesets && @ui"

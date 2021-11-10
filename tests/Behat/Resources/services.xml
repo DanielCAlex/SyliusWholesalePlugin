@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
-    <services>
-        <defaults public="true" />
-        <!-- Put your Behat services here -->
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <imports>
+        <!-- UI Contexts -->
+        <import resource="services/contexts/ui.xml"/>
 
-        <service id="skyboundtech.context.ui.admin.ruleset" class="Tests\SkyBoundTech\SyliusWholesalePlugin\Behat\Context\Ui\Admin\ManagingRulesetsContext">
-        </service>
-
-    </services>
+        <!-- Pages -->
+        <import resource="services/pages/pages.xml"/>
+    </imports>
 </container>
