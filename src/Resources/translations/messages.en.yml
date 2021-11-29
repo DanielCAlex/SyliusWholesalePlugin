@@ -1,0 +1,20 @@
+skyboundtech.ui.wholesale_rulesets: Wholesale Rulesets
+
+skyboundtech:
+  ui:
+    wholesale: Wholesale
+    wholesale_ruleset:
+      header: Wholesale Purchase Rulesets
+      subheader: Create, manage, and delete your wholesale rulesets.
+      ruleset_name: Ruleset Name
+      ruleset_description: Ruleset Description
+    wholesale_rules:
+      rule_name: Rule Name
+      rule_description: Rule Description
+      quantity_step:
+        quantity: Set Quantity
+        quantity_explanation: "Products under this rule can only by purchased in sets of the number you choose. Example: sets of 5."
+        scope: Quantity Set Scope
+        select_taxons: Select Taxonomies
+        select_products: Select Products
+        select_product_variants: Select Product Variants

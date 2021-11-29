@@ -1,5 +1,5 @@
 # config/routes.yaml
-skyboundtech_wholesale_ruleset:
+wholesale_ruleset:
   resource: |
     alias: skyboundtech.wholesale_ruleset
     section: admin
@@ -8,7 +8,8 @@ skyboundtech_wholesale_ruleset:
     grid: skyboundtech.wholesale_ruleset
     vars:
         all:
-            subheader: skyboundtech.ui.wholesale
+            header: skyboundtech.ui.wholesale_ruleset.header
+            subheader: skyboundtech.ui.wholesale_ruleset.subheader
         index:
             icon: 'file image outline'
   type: sylius.resource
