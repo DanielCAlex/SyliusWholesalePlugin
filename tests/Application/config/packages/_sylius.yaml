@@ -8,6 +8,10 @@ imports:
 
     - { resource: "@SyliusApiBundle/Resources/config/app/config.yaml" }
 
+
+    # Wholesale plugin
+    - { resource: "@SkyBoundTechSyliusWholesalePlugin/Resources/config/resources.yml" }
+
 parameters:
     sylius_core.public_dir: '%kernel.project_dir%/public'
 
