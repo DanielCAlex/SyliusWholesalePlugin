@@ -1,0 +1,7 @@
+# config/packages/sylius_resource.yaml
+sylius_resource:
+  resources:
+    skyboundtech.wholesale_ruleset:
+      driver: doctrine/orm
+      classes:
+        model: SkyBoundTech\SyliusWholesalePlugin\Entity\Ruleset
