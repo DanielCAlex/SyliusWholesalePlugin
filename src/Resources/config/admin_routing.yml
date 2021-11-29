@@ -1,1 +1,15 @@
-# Define your own admin routes here
+# config/routes.yaml
+skyboundtech_wholesale_ruleset:
+  resource: |
+    alias: skyboundtech.wholesale_ruleset
+    section: admin
+    templates: "@SyliusAdmin\\Crud"
+    redirect: update
+    grid: skyboundtech.wholesale_ruleset
+    vars:
+        all:
+            subheader: skyboundtech.ui.wholesale
+        index:
+            icon: 'file image outline'
+  type: sylius.resource
+  prefix: /admin
