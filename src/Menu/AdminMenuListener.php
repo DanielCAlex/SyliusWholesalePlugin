@@ -21,11 +21,11 @@ final class AdminMenuListener
         $menu = $event->getMenu();
 
         $newSubmenu = $menu
-            ->addChild('new')
-            ->setLabel('Custom Admin Submenu');
+            ->addChild('wholesale')
+            ->setLabel('Wholesale');
 
         $newSubmenu
-            ->addChild('new-subitem')
-            ->setLabel('Custom Admin Menu Item');
+            ->addChild('ruleset')
+            ->setLabel('Wholesale Rulesets');
     }
 }
