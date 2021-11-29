@@ -8,6 +8,9 @@
         <!-- Admin Menu Listener -->
         <service id="app.listener.admin.menu_builder" class="SkyBoundTech\SyliusWholesalePlugin\Menu\AdminMenuListener">
             <tag name="kernel.event_listener" event="sylius.menu.admin.main" method="addAdminMenuItems"/>
+            <argument type="service" id="Symfony\Component\Routing\Generator\UrlGeneratorInterface">
+                Symfony\Component\Routing\Generator\UrlGeneratorInterface
+            </argument>
         </service>
     </services>
 </container>
