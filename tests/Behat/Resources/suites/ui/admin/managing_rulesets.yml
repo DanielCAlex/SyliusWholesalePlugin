@@ -3,8 +3,10 @@ default:
     ui_managing_rulesets:
       contexts:
         - sylius.behat.context.hook.doctrine_orm
-        - sylius.behat.context.setup.security
+        - sylius.behat.context.setup.admin_security
+        - sylius.behat.context.ui.admin.notification
         - tests.skyboundtech.sylius_wholesale_plugin.behat.context.ui.admin.managing_rulesets_context
+        - sylius.behat.context.setup.channel
 
       filters:
         tags: "@managing_rulesets && @ui"
