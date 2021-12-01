@@ -14,20 +14,15 @@ namespace Tests\SkyBoundTech\SyliusWholesalePlugin\Behat\Page\Admin\Ruleset;
 
 use Sylius\Behat\Page\Admin\Crud\CreatePage as BaseCreatePage;
 
-class CreatePage extends BaseCreatePage implements CreatePageInterface
+final class CreatePage extends BaseCreatePage implements CreatePageInterface
 {
-    public function fillName(string $name): void
+    public function fillField(string $fieldName, string $value)
     {
-        $this->getDocument()->selectFieldOption('Name', $name);
-    }
-
-    public function fillDescription(string $description): void
-    {
-        $this->getDocument()->selectFieldOption('Description', $description);
+        $this->getDocument()->fillField($fieldName, $value);
     }
 
     public function enable(): void
     {
-        $this->getDocument()->checkField('enabled');
+        $this->getDocument()->checkField('Enabled');
     }
 }

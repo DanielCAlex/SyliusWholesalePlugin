@@ -16,9 +16,11 @@ use Sylius\Behat\Page\Admin\Crud\CreatePageInterface as BaseCreatePageInterface;
 
 interface CreatePageInterface extends BaseCreatePageInterface
 {
-    public function fillName(string $name): void;
-
-    public function fillDescription(string $description): void;
-
+    /**
+     * @param string $fieldName
+     * @param string $value
+     * @return mixed
+     */
+    public function fillField(string $fieldName, string $value);
     public function enable(): void;
 }
