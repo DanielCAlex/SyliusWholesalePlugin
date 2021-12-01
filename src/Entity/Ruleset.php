@@ -26,20 +26,6 @@ final class Ruleset implements RulesetInterface, ResourceInterface
     private $enabled;
 
     /**
-     * @param int $id
-     * @param string $name
-     * @param string $description
-     * @param bool $enabled
-     */
-    public function __construct(int $id, string $name, string $description, bool $enabled)
-    {
-        $this->id = $id;
-        $this->name = $name;
-        $this->description = $description;
-        $this->enabled = $enabled;
-    }
-
-    /**
      * @return int
      */
     public function getId(): int
