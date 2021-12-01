@@ -14,7 +14,7 @@ namespace SkyBoundTech\SyliusWholesalePlugin\Entity;
 
 interface RulesetInterface
 {
-    public function getId(): int;
+    public function getId(): ?int;
 
     public function getName(): string;
 
