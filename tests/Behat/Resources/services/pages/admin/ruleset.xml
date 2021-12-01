@@ -12,7 +12,16 @@
                 parent="sylius.behat.page.admin.crud.create"
                 public="false"
         >
+            <argument type="string">skyboundtech_admin_wholesale_ruleset_create</argument>
         </service>
 
+        <service
+                id="tests.skyboundtech.sylius_wholesale_plugin.behat.page.admin.ruleset.index_page"
+                class="Tests\SkyBoundTech\SyliusWholesalePlugin\Behat\Page\Admin\Ruleset\IndexPage"
+                parent="sylius.behat.page.admin.crud.index"
+                public="false"
+        >
+            <argument type="string">skyboundtech_admin_wholesale_ruleset_index</argument>
+        </service>
     </services>
 </container>
