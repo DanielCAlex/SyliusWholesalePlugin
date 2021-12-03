@@ -12,10 +12,19 @@ declare(strict_types=1);
 
 namespace SkyBoundTech\SyliusWholesalePlugin\Entity;
 
+use Sylius\Component\Channel\Model\ChannelsAwareInterface;
 use Sylius\Component\Resource\Model\ResourceInterface;
 
-final class Ruleset implements RulesetInterface, ResourceInterface
+final class Ruleset implements RulesetInterface
 {
+
+    use ChannelsAwareTrait;
+
+    public function __construct()
+    {
+        $this->initializeChannelsCollection();
+    }
+
     /** @var int */
     private $id;
     /** @var string */

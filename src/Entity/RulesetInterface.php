@@ -12,7 +12,10 @@ declare(strict_types=1);
 
 namespace SkyBoundTech\SyliusWholesalePlugin\Entity;
 
-interface RulesetInterface
+use Sylius\Component\Channel\Model\ChannelsAwareInterface;
+use Sylius\Component\Resource\Model\ResourceInterface;
+
+interface RulesetInterface extends ResourceInterface, ChannelsAwareInterface
 {
     public function getId(): ?int;
 
