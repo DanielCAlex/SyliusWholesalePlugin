@@ -1,4 +1,13 @@
 # config/packages/sylius_resource.yaml
+
+#Models
+sylius_channel:
+  resources:
+    channel:
+      classes:
+        model: SkyBoundTech\SyliusWholesalePlugin\Entity\Channel
+
+#New Resources
 sylius_resource:
   resources:
     skyboundtech.wholesale_ruleset:
