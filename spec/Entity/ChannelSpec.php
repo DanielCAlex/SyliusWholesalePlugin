@@ -19,17 +19,17 @@ use SkyBoundTech\SyliusWholesalePlugin\Entity\RulesetInterface;
 
 final class ChannelSpec extends ObjectBehavior
 {
-    public function it_is_initializable(): void
+    function it_is_initializable(): void
     {
         $this->shouldHaveType(Channel::class);
     }
 
-    public function it_implements_channel_interface(): void
+    function it_implements_channel_interface(): void
     {
         $this->shouldHaveType(ChannelInterface::class);
     }
 
-    public function it_associates_rulesets(RulesetInterface $rulesetOne, RulesetInterface $rulesetTwo, RulesetInterface $rulesetThree): void
+    function it_associates_rulesets(RulesetInterface $rulesetOne, RulesetInterface $rulesetTwo, RulesetInterface $rulesetThree): void
     {
         $this->addRuleset($rulesetOne);
         $this->hasRuleset($rulesetOne)->shouldReturn(true);
