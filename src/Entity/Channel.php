@@ -16,5 +16,11 @@ use Sylius\Component\Core\Model\Channel as BaseChannel;
 
 final class Channel extends BaseChannel implements ChannelInterface
 {
+    public function __construct()
+    {
+        parent::__construct();
+        $this->initializeRulesetsCollection();
+    }
+
     use RulesetsAwareTrait;
 }
