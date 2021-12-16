@@ -40,6 +40,7 @@ final class RulesetSpec extends ObjectBehavior
         $this->isEnabled()->shouldReturn(false);
     }
 
+
     function it_associates_channels(ChannelInterface $firstChannel, ChannelInterface $secondChannel): void
     {
         $this->addChannel($firstChannel);
