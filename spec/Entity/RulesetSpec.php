@@ -17,7 +17,7 @@ use SkyBoundTech\SyliusWholesalePlugin\Entity\Ruleset;
 use Sylius\Component\Core\Model\ChannelInterface;
 use Sylius\Component\Resource\Model\ResourceInterface;
 
-class RulesetSpec extends ObjectBehavior
+final class RulesetSpec extends ObjectBehavior
 {
     function it_is_initializable(): void
     {
@@ -48,7 +48,6 @@ class RulesetSpec extends ObjectBehavior
         $this->hasChannel($secondChannel)->shouldReturn(false);
 
         $this->removeChannel($firstChannel);
-
         $this->hasChannel($firstChannel)->shouldReturn(false);
     }
 }
