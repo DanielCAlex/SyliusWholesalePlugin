@@ -14,7 +14,7 @@ namespace spec\SkyBoundTech\SyliusWholesalePlugin\Entity;
 
 use PhpSpec\ObjectBehavior;
 use SkyBoundTech\SyliusWholesalePlugin\Entity\Ruleset;
-use Sylius\Component\Core\Model\ChannelInterface;
+use SkyBoundTech\SyliusWholesalePlugin\Entity\ChannelInterface;
 use Sylius\Component\Resource\Model\ResourceInterface;
 
 final class RulesetSpec extends ObjectBehavior
@@ -40,7 +40,6 @@ final class RulesetSpec extends ObjectBehavior
         $this->isEnabled()->shouldReturn(false);
     }
 
-
     function it_associates_channels(ChannelInterface $firstChannel, ChannelInterface $secondChannel): void
     {
         $this->addChannel($firstChannel);
@@ -51,4 +50,18 @@ final class RulesetSpec extends ObjectBehavior
         $this->removeChannel($firstChannel);
         $this->hasChannel($firstChannel)->shouldReturn(false);
     }
+    function it_associates_rules(RuleInterface $firstRule, RuleInterface $secondRule): void
+    {
+        $this->addRule($firstRule);
+        $this->hasRule($firstRule)->shouldReturn(true);
+
+        $this->addRule($secondRule);
+        $this->hasRule($secondRule)->shouldReturn(true);
+        $this->removeRule($secondRule)->shouldReturn(false);
+
+        $this->addRule($firstRule);
+        $this->hasRule($firstRule)->shouldReturn(false);
+
+    }
+
 }
