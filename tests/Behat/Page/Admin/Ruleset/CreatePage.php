@@ -25,4 +25,9 @@ final class CreatePage extends BaseCreatePage implements CreatePageInterface
     {
         $this->getDocument()->checkField('Enabled');
     }
+
+    public function enableChannel(string $channelName)
+    {
+        $this->getDocument()->checkField($channelName);
+    }
 }

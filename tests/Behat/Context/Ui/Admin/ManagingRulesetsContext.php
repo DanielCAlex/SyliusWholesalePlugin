@@ -75,6 +75,14 @@ final class ManagingRulesetsContext implements Context
     }
 
     /**
+     * @Given I enable the channel :channelName
+     */
+    public function iEnableTheChannel($channelName)
+    {
+        $this->createRulesetPage->enableChannel($channelName);
+    }
+
+    /**
      * @Given I add it
      */
     public function iAddIt()
