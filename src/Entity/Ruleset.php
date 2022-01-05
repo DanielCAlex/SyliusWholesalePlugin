@@ -12,27 +12,24 @@ declare(strict_types=1);
 
 namespace SkyBoundTech\SyliusWholesalePlugin\Entity;
 
-use Sylius\Component\Channel\Model\ChannelsAwareInterface;
-use Sylius\Component\Resource\Model\ResourceInterface;
-
+/** @psalm-suppress PropertyNotSetInConstructor */
 final class Ruleset implements RulesetInterface
 {
-
     use ChannelsAwareTrait;
+
+    /** @var int */
+    private int $id;
+    /** @var string */
+    private string $name;
+    /** @var string */
+    private string $description;
+    /** @var boolean */
+    private bool $enabled;
 
     public function __construct()
     {
         $this->initializeChannelsCollection();
     }
-
-    /** @var int */
-    private $id;
-    /** @var string */
-    private $name;
-    /** @var string */
-    private $description;
-    /** @var boolean */
-    private $enabled;
 
     /**
      * @return int|null
