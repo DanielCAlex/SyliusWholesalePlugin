@@ -13,12 +13,8 @@ declare(strict_types=1);
 
 namespace SkyBoundTech\SyliusWholesalePlugin\Entity;
 
-
-
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
-use Sylius\Component\Channel\Model\ChannelInterface;
-use Sylius\Component\Core\Model\Product;
 
 trait ChannelsAwareTrait
 {
