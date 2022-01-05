@@ -13,7 +13,9 @@ declare(strict_types=1);
 
 namespace SkyBoundTech\SyliusWholesalePlugin\Entity;
 
-interface RuleInterface extends ProductVariantAwareInterface
+use Sylius\Component\Resource\Model\ResourceInterface;
+
+interface RuleInterface extends ResourceInterface
 {
     /**
      * @return int|null

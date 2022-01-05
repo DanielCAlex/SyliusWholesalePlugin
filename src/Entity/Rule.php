@@ -12,23 +12,22 @@ declare(strict_types=1);
 
 namespace SkyBoundTech\SyliusWholesalePlugin\Entity;
 
+use Sylius\Component\Resource\Model\ResourceInterface;
+
 /** @psalm-suppress PropertyNotSetInConstructor */
-class Rule implements RuleInterface
+final class Rule implements RuleInterface
 {
-    use ProductVariantAwareTrait;
-
     const SCOPE_PRODUCT_VARIANT = 'product_variant';
-
+    /** @var int  */
     private int $id;
+    /** @var string  */
     private string $name;
+    /** @var string  */
     private string $description;
+    /** @var string  */
     private string $scope;
+    /** @var bool  */
     private bool $enabled;
-
-    public function __construct()
-    {
-        $this->initializeProductVariantCollection();
-    }
 
     public function getId(): int
     {
