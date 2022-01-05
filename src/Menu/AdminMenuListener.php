@@ -39,5 +39,9 @@ final class AdminMenuListener
         $newSubmenu
             ->addChild('ruleset', ['uri' => $this->url->generate('skyboundtech_admin_wholesale_ruleset_index')])
             ->setLabel('Wholesale Rulesets');
+
+        $newSubmenu
+            ->addChild('rule', ['uri' => $this->url->generate('skyboundtech_admin_wholesale_rule_index')])
+            ->setLabel('Purchase Rules');
     }
 }
