@@ -4,11 +4,13 @@ skyboundtech:
   ui:
     wholesale: Wholesale
     wholesale_ruleset:
-      header: Wholesale Purchase Rulesets
-      subheader: Create, manage, and delete your wholesale rulesets.
+      header: Wholesale Rulesets
+      subheader: Use rulesets to categorize your wholesale purchase rules.
       ruleset_name: Ruleset Name
       ruleset_description: Ruleset Description
-    wholesale_rules:
+    wholesale_rule:
+      header: Wholesale Purchase Rules
+      subheader: Manage wholesale rules that affect how customers purchase your products.
       rule_name: Rule Name
       rule_description: Rule Description
       quantity_step:

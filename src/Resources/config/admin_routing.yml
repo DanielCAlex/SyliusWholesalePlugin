@@ -14,3 +14,19 @@ wholesale_ruleset:
             icon: 'file image outline'
   type: sylius.resource
   prefix: /admin
+
+wholesale_rule:
+  resource: |
+    alias: skyboundtech.wholesale_rule
+    section: admin
+    templates: "@SyliusAdmin\\Crud"
+    redirect: update
+    grid: skyboundtech.wholesale_rule
+    vars:
+        all:
+            header: skyboundtech.ui.wholesale_rule.header
+            subheader: skyboundtech.ui.wholesale_rule.subheader
+        index:
+            icon: 'file image outline'
+  type: sylius.resource
+  prefix: /admin
