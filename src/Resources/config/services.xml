@@ -19,5 +19,13 @@
                 SkyBoundTech\SyliusWholesalePlugin\Entity
             </argument>
         </service>
+        <service id="skyboundtech.sylius_wholesale_plugin.form.rule_type"
+                 class="SkyBoundTech\SyliusWholesalePlugin\Form\RuleType">
+            <tag name="form.type"/>
+            <argument type="string">
+                SkyBoundTech\SyliusWholesalePlugin\Entity
+            </argument>
+        </service>
+
     </services>
 </container>

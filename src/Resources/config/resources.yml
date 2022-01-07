@@ -19,4 +19,4 @@ sylius_resource:
       driver: doctrine/orm
       classes:
         model: SkyBoundTech\SyliusWholesalePlugin\Entity\Rule
-        form: SkyBoundTech\SyliusWholesalePlugin\Form\Rule
+        form: SkyBoundTech\SyliusWholesalePlugin\Form\RuleType
