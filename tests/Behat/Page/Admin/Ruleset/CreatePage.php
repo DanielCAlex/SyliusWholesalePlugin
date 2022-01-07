@@ -16,7 +16,7 @@ use Sylius\Behat\Page\Admin\Crud\CreatePage as BaseCreatePage;
 
 final class CreatePage extends BaseCreatePage implements CreatePageInterface
 {
-    public function fillField(string $fieldName, string $value)
+    public function fillField(string $fieldName, string $value): void
     {
         $this->getDocument()->fillField($fieldName, $value);
     }
@@ -26,7 +26,7 @@ final class CreatePage extends BaseCreatePage implements CreatePageInterface
         $this->getDocument()->checkField('Enabled');
     }
 
-    public function enableChannel(string $channelName)
+    public function enableChannel(string $channelName): void
     {
         $this->getDocument()->checkField($channelName);
     }

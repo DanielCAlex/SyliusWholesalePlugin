@@ -17,7 +17,9 @@ use Sylius\Behat\Page\Admin\Crud\CreatePageInterface as BaseCreatePageInterface;
 interface CreatePageInterface extends BaseCreatePageInterface
 {
 
-    public function fillField(string $fieldName, string $value);
+    public function fillField(string $fieldName, string $value): void;
+
     public function enable(): void;
-    public function enableChannel(string $channelName);
+
+    public function enableChannel(string $channelName): void;
 }
