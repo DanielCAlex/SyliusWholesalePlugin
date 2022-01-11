@@ -15,6 +15,7 @@ sylius_resource:
       classes:
         interface: SkyBoundTech\SyliusWholesalePlugin\Entity\RulesetInterface
         model: SkyBoundTech\SyliusWholesalePlugin\Entity\Ruleset
+        repository: SkyBoundTech\SyliusWholesalePlugin\Repository\RulesetRepository
         form: SkyBoundTech\SyliusWholesalePlugin\Form\RulesetType
     skyboundtech.wholesale_rule:
       driver: doctrine/orm
