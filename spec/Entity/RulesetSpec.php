@@ -50,18 +50,4 @@ final class RulesetSpec extends ObjectBehavior
         $this->removeChannel($firstChannel);
         $this->hasChannel($firstChannel)->shouldReturn(false);
     }
-    function it_associates_rules(RuleInterface $firstRule, RuleInterface $secondRule): void
-    {
-        $this->addRule($firstRule);
-        $this->hasRule($firstRule)->shouldReturn(true);
-
-        $this->addRule($secondRule);
-        $this->hasRule($secondRule)->shouldReturn(true);
-        $this->removeRule($secondRule)->shouldReturn(false);
-
-        $this->addRule($firstRule);
-        $this->hasRule($firstRule)->shouldReturn(false);
-
-    }
-
 }
