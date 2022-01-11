@@ -5,7 +5,7 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                                       http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <entity name="SkyBoundTech\SyliusWholesalePlugin\Entity\Ruleset" table="skyboundtech_wholesale_ruleset">
+    <mapped-superclass name="SkyBoundTech\SyliusWholesalePlugin\Entity\Ruleset" table="skyboundtech_wholesale_ruleset">
         <id name="id" column="id" type="integer">
             <generator strategy="AUTO"/>
         </id>
@@ -15,7 +15,7 @@
         <field name="enabled" type="boolean" nullable="false"/>
 
         <many-to-many field="channels" inversed-by="rulesets"
-                      target-entity="SkyBoundTech\SyliusWholesalePlugin\Entity\Channel">
+                      target-entity="SkyBoundTech\SyliusWholesalePlugin\Entity\ChannelInterface">
             <join-table name="skyboundtech_wholesale_ruleset_channels">
                 <join-columns>
                     <join-column name="ruleset_id" referenced-column-name="id" on-delete="CASCADE"/>
@@ -25,5 +25,5 @@
                 </inverse-join-columns>
             </join-table>
         </many-to-many>
-    </entity>
+    </mapped-superclass>
 </doctrine-mapping>
