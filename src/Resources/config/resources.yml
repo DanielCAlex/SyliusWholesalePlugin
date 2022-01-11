@@ -13,6 +13,7 @@ sylius_resource:
     skyboundtech.wholesale_ruleset:
       driver: doctrine/orm
       classes:
+        interface: SkyBoundTech\SyliusWholesalePlugin\Entity\RulesetInterface
         model: SkyBoundTech\SyliusWholesalePlugin\Entity\Ruleset
         form: SkyBoundTech\SyliusWholesalePlugin\Form\RulesetType
     skyboundtech.wholesale_rule:
