@@ -17,73 +17,56 @@ final class Ruleset implements RulesetInterface
 {
     use ChannelsAwareTrait;
 
-    /** @var int */
-    private int $id;
-    /** @var string */
-    private string $name;
-    /** @var string */
-    private string $description;
+    /** @var int|null */
+    protected ?int $id;
+    /** @var string|null */
+    protected ?string $name;
+    /** @var string|null */
+    protected ?string $description;
     /** @var boolean */
-    private bool $enabled;
+    protected bool $enabled;
 
     public function __construct()
     {
         $this->initializeChannelsCollection();
     }
 
-    /**
-     * @return int|null
-     */
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * @return string
-     */
-    public function getName(): string
-    {
-        return $this->name;
-    }
 
-    /**
-     * @param string $name
-     */
-    public function setName(string $name): void
-    {
-        $this->name = $name;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDescription(): string
-    {
-        return $this->description;
-    }
-
-    /**
-     * @param string $description
-     */
-    public function setDescription(string $description): void
-    {
-        $this->description = $description;
-    }
-
-    /**
-     * @return bool
-     */
     public function isEnabled(): bool
     {
         return $this->enabled;
     }
 
-    /**
-     * @param bool $enabled
-     */
     public function setEnabled(bool $enabled): void
     {
         $this->enabled = $enabled;
     }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): void
+    {
+        $this->name = $name;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): void
+    {
+        $this->description = $description;
+    }
+
+
 }

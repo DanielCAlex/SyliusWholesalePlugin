@@ -19,11 +19,11 @@ interface RulesetInterface extends ResourceInterface, ChannelsAwareInterface
 {
     public function getId(): ?int;
 
-    public function getName(): string;
+    public function getName(): ?string;
 
     public function setName(string $name): void;
 
-    public function getDescription(): string;
+    public function getDescription(): ?string;
 
     public function setDescription(string $description): void;
 
