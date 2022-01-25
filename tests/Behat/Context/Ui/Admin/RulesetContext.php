@@ -20,7 +20,7 @@ use Tests\SkyBoundTech\SyliusWholesalePlugin\Behat\Page\Admin\Ruleset\IndexPageI
 use Webmozart\Assert\Assert;
 
 
-final class ManagingRulesetsContext implements Context
+final class RulesetContext implements Context
 {
     /** @var CreatePageInterface */
     private $createRulesetPage;
