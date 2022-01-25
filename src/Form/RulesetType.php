@@ -16,6 +16,7 @@ use Sylius\Bundle\ChannelBundle\Form\Type\ChannelChoiceType;
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Sylius\Bundle\ResourceBundle\Form\Type\ResourceTranslationsType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 class RulesetType extends AbstractResourceType
@@ -23,6 +24,9 @@ class RulesetType extends AbstractResourceType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('code', TextType::class, [
+                'required' => true
+            ])
             ->add('translations', ResourceTranslationsType::class, [
                 'entry_type' => RulesetTranslationType::class,
             ])

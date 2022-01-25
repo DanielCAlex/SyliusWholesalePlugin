@@ -51,6 +51,14 @@ final class RulesetContext implements Context
     }
 
     /**
+     * @Given I specify its code as :code
+     */
+    public function iSpecifyItsCodeAs($code)
+    {
+        $this->createRulesetPage->fillField('Code', $code);
+    }
+
+    /**
      * @Given I specify its name as :name
      */
     public function iSpecifyItsNameAs($name)

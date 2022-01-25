@@ -11,8 +11,9 @@ Feature: Adding a new wholesale ruleset
   @ui
   Scenario: Adding a new ruleset
     Given I want to create a new ruleset
+    And I specify its code as "wholesale_ruleset_one"
     And I specify its name as "Wholesale Ruleset One"
-  And I specify its description as "This is the first Wholesale Ruleset created"
+    And I specify its description as "This is the first Wholesale Ruleset created"
     And I enable it
     And I enable the channel "Fashion"
     And I add it

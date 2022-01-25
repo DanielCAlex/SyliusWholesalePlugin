@@ -9,8 +9,8 @@
         <id name="id" column="id" type="integer">
             <generator strategy="AUTO"/>
         </id>
+        <field name="code" type="string" nullable="false"/>
         <field name="enabled" type="boolean" nullable="false"/>
-
         <many-to-many field="channels" inversed-by="rulesets"
                       target-entity="SkyBoundTech\SyliusWholesalePlugin\Entity\ChannelInterface">
             <join-table name="skyboundtech_wholesale_ruleset_channels">

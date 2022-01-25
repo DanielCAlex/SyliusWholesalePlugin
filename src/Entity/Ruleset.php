@@ -23,8 +23,10 @@ final class Ruleset implements RulesetInterface
         __construct as private initializeTranslationsCollection;
     }
 
-    /** @var int */
+    /** @var int|null */
     protected ?int $id;
+    /** @var string|null  */
+    protected ?string $code;
     /** @var string|null */
     protected ?string $name;
     /** @var string|null */
@@ -43,6 +45,16 @@ final class Ruleset implements RulesetInterface
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getCode(): ?string
+    {
+        return $this->code;
+    }
+
+    public function setCode(?string $code): void
+    {
+        $this->code = $code;
     }
 
     public function isEnabled(): bool
