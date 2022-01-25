@@ -1,5 +1,5 @@
 @managing_rulesets
-Feature: Adding a new ruleset
+Feature: Adding a new wholesale ruleset
   In order to sell products with business rules pertaining to wholesale
   As an Administrator
   I want to add a new wholesale ruleset
