@@ -15,10 +15,14 @@
         <service id="skyboundtech.sylius_wholesale_plugin.form.ruleset_type"
                  class="SkyBoundTech\SyliusWholesalePlugin\Form\RulesetType">
             <tag name="form.type"/>
-            <argument>
-                %skyboundtech.model.wholesale_ruleset.class%
-            </argument>
+            <argument>%skyboundtech.model.wholesale_ruleset.class%</argument>
         </service>
+        <service id="skyboundtech.sylius_wholesale_plugin.form.ruleset_translation_type"
+                 class="SkyBoundTech\SyliusWholesalePlugin\Form\RulesetTranslationType">
+            <tag name="form.type"/>
+            <argument>%skyboundtech.model.wholesale_ruleset_translation.class%</argument>
+        </service>
+
         <service id="skyboundtech.sylius_wholesale_plugin.form.rule_type"
                  class="SkyBoundTech\SyliusWholesalePlugin\Form\RuleType">
             <tag name="form.type"/>

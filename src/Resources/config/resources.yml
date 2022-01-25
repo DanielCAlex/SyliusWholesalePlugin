@@ -17,6 +17,11 @@ sylius_resource:
         model: SkyBoundTech\SyliusWholesalePlugin\Entity\Ruleset
         repository: SkyBoundTech\SyliusWholesalePlugin\Repository\RulesetRepository
         form: SkyBoundTech\SyliusWholesalePlugin\Form\RulesetType
+      translation:
+        classes:
+          interface: SkyBoundTech\SyliusWholesalePlugin\Entity\RulesetTranslationInterface
+          model: SkyBoundTech\SyliusWholesalePlugin\Entity\RulesetTranslation
+          form: SkyBoundTech\SyliusWholesalePlugin\Form\RulesetTranslationType
     skyboundtech.wholesale_rule:
       driver: doctrine/orm
       classes:

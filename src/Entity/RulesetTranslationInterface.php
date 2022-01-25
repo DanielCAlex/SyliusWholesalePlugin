@@ -10,15 +10,22 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
+
 namespace SkyBoundTech\SyliusWholesalePlugin\Entity;
 
 
 use Sylius\Component\Resource\Model\ResourceInterface;
 use Sylius\Component\Resource\Model\TranslatableInterface;
 
-interface RulesetInterface extends ResourceInterface, ChannelsAwareInterface, TranslatableInterface
+interface RulesetTranslationInterface extends ResourceInterface
 {
-    public function isEnabled(): bool;
+    public function getId(): ?int;
 
-    public function setEnabled(bool $enabled): void;
+    public function getName(): ?string;
+
+    public function setName(string $name): void;
+
+    public function getDescription(): ?string;
+
+    public function setDescription(?string $description): void;
 }

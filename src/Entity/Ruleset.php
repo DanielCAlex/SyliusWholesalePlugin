@@ -12,13 +12,19 @@ declare(strict_types=1);
 
 namespace SkyBoundTech\SyliusWholesalePlugin\Entity;
 
+use Sylius\Component\Resource\Model\TranslatableTrait;
+
 /** @psalm-suppress PropertyNotSetInConstructor */
 final class Ruleset implements RulesetInterface
 {
     use ChannelsAwareTrait;
 
-    /** @var int|null */
-    protected ?int $id;
+    use TranslatableTrait {
+        __construct as private initializeTranslationsCollection;
+    }
+
+    /** @var int */
+    protected int $id;
     /** @var string|null */
     protected ?string $name;
     /** @var string|null */
@@ -26,9 +32,11 @@ final class Ruleset implements RulesetInterface
     /** @var boolean */
     protected bool $enabled;
 
+
     public function __construct()
     {
         $this->initializeChannelsCollection();
+        $this->initializeTranslationsCollection();
     }
 
 
@@ -50,23 +58,27 @@ final class Ruleset implements RulesetInterface
 
     public function getName(): ?string
     {
-        return $this->name;
+        return $this->getTranslation()->getName();
     }
 
     public function setName(string $name): void
     {
-        $this->name = $name;
+        $this->getTranslation()->setName($name);
     }
 
     public function getDescription(): ?string
     {
-        return $this->description;
+        return $this->getTranslation()->getDescription();
     }
 
     public function setDescription(?string $description): void
     {
-        $this->description = $description;
+        $this->getTranslation()->setDescription($description);
     }
 
+    protected function createTranslation()
+    {
+        return new RulesetTranslation();
+    }
 
 }

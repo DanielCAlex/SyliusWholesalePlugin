@@ -12,32 +12,24 @@ declare(strict_types=1);
 
 namespace SkyBoundTech\SyliusWholesalePlugin\Form;
 
-use Sylius\Bundle\ChannelBundle\Form\Type\ChannelChoiceType;
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
-use Sylius\Bundle\ResourceBundle\Form\Type\ResourceTranslationsType;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
-class RulesetType extends AbstractResourceType
+final class RulesetTranslationType extends AbstractResourceType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('translations', ResourceTranslationsType::class, [
-                'entry_type' => RulesetTranslationType::class,
-            ])
-            ->add('enabled', CheckboxType::class)
-            ->add('channels', ChannelChoiceType::class, [
-                'multiple' => true,
-                'expanded' => true,
+            ->add('name', TextType::class)
+            ->add('description', TextareaType::class, [
+                'required' => false,
             ])
         ;
     }
-
-
     public function getBlockPrefix()
     {
-        return "skyboundtech_sylius_wholesale_plugin_ruleset";
+        return "skyboundtech_sylius_wholesale_plugin_ruleset_translation";
     }
-
 }
