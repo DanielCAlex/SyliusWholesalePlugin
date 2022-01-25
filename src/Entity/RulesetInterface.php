@@ -18,6 +18,8 @@ use Sylius\Component\Resource\Model\TranslatableInterface;
 
 interface RulesetInterface extends ResourceInterface, ChannelsAwareInterface, TranslatableInterface
 {
+    public function getId(): ?int;
+
     public function isEnabled(): bool;
 
     public function setEnabled(bool $enabled): void;

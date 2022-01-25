@@ -24,7 +24,7 @@ final class Ruleset implements RulesetInterface
     }
 
     /** @var int */
-    protected int $id;
+    protected ?int $id;
     /** @var string|null */
     protected ?string $name;
     /** @var string|null */
@@ -44,7 +44,6 @@ final class Ruleset implements RulesetInterface
     {
         return $this->id;
     }
-
 
     public function isEnabled(): bool
     {
