@@ -6,7 +6,7 @@
         <!-- UI Contexts -->
         <import resource="services/contexts/ui.xml"/>
 
-        <!-- Pages -->
-        <import resource="services/pages/pages.xml"/>
+        <!-- Admin Pages -->
+        <import resource="services/pages/admin/ruleset.xml"/>
     </imports>
 </container>
