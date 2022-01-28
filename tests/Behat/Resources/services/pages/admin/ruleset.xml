@@ -23,5 +23,14 @@
         >
             <argument type="string">skyboundtech_admin_wholesale_ruleset_index</argument>
         </service>
+
+        <service
+                id="tests.skyboundtech.sylius_wholesale_plugin.behat.page.admin.ruleset.update_page"
+                class="Tests\SkyBoundTech\SyliusWholesalePlugin\Behat\Page\Admin\Ruleset\UpdatePage"
+                parent="sylius.behat.page.admin.crud.update"
+                public="false"
+        >
+            <argument type="string">skyboundtech_admin_wholesale_ruleset_update</argument>
+        </service>
     </services>
 </container>
