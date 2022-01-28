@@ -28,6 +28,7 @@ final class RulesetContext implements Context
     /** @var IndexPageInterface */
     private $indexPage;
 
+
     /** @var ResponseCheckerInterface */
     private $responseChecker;
 
@@ -35,8 +36,11 @@ final class RulesetContext implements Context
      * @param CreatePageInterface $createRulesetPage
      * @param ResponseCheckerInterface $responseChecker
      */
-    public function __construct(CreatePageInterface $createRulesetPage, ResponseCheckerInterface $responseChecker, IndexPageInterface $indexPage)
-    {
+    public function __construct(
+        CreatePageInterface $createRulesetPage,
+        ResponseCheckerInterface $responseChecker,
+        IndexPageInterface $indexPage
+    ) {
         $this->createRulesetPage = $createRulesetPage;
         $this->responseChecker = $responseChecker;
         $this->indexPage = $indexPage;
@@ -112,6 +116,9 @@ final class RulesetContext implements Context
     public function theRulesetShouldAppearInTheRegistry($rulesetName)
     {
         $this->indexPage->open();
-        Assert::true($this->indexPage->isSingleResourceOnPage(['name' => $rulesetName]));;
+        Assert::true(
+            $this->indexPage->isSingleResourceOnPage(['name' => $rulesetName]),
+            sprintf('Ruleset %s should exist, but does not appear on the page', $rulesetName)
+        );
     }
 }
