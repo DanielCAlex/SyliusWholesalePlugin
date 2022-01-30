@@ -2,14 +2,17 @@ default:
   suites:
     ui_managing_rulesets:
       contexts:
+        # Hooks
         - sylius.behat.context.hook.doctrine_orm
 
+        # Setup
         - sylius.behat.context.setup.admin_security
         - sylius.behat.context.setup.channel
         - sylius.behat.context.setup.product
-
+        - tests.skyboundtech.sylius_wholesale_plugin.behat.context.setup.ruleset_context
         - sylius.behat.context.ui.admin.notification
 
+        # Plugin Ui
         - tests.skyboundtech.sylius_wholesale_plugin.behat.context.ui.admin.ruleset_context
 
       filters:
