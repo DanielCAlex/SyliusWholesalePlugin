@@ -10,10 +10,11 @@ wholesale_ruleset:
         all:
             header: skyboundtech.ui.wholesale_ruleset.header
             subheader: skyboundtech.ui.wholesale_ruleset.subheader
+            templates:
+              form: "@SkyBoundTechSyliusWholesalePlugin/Admin/Ruleset/_form.html.twig"
         index:
             icon: 'file image outline'
   type: sylius.resource
-  prefix: /admin
 
 wholesale_rule:
   resource: |
